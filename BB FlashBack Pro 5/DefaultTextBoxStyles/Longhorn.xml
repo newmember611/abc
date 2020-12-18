@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Application Name="">
+  <Program Name="">
+    <Configuration>
+      <Value Name="Alignment" Type="Integer">
+        <Contents>17</Contents>
+      </Value>
+      <Value Name="BackColor" Type="Integer">
+        <Contents>8793122</Contents>
+      </Value>
+      <Value Name="BorderColor" Type="Integer">
+        <Contents>8388608</Contents>
+      </Value>
+      <Value Name="BorderWidth" Type="Integer">
+        <Contents>1</Contents>
+      </Value>
+      <Value Name="CalloutStyle" Type="Boolean">
+        <Contents>true</Contents>
+      </Value>
+      <Value Name="DrawBorder" Type="Boolean">
+        <Contents>true</Contents>
+      </Value>
+      <Value Name="Duration" Type="Integer">
+        <Contents>1000</Contents>
+      </Value>
+      <Value Name="FadeIn" Type="Integer">
+        <Contents>0</Contents>
+      </Value>
+      <Value Name="FadeOut" Type="Integer">
+        <Contents>0</Contents>
+      </Value>
+      <Value Name="FontBold" Type="Boolean">
+        <Contents>false</Contents>
+      </Value>
+      <Value Name="FontColor" Type="Integer">
+        <Contents>16777215</Contents>
+      </Value>
+      <Value Name="FontItalic" Type="Boolean">
+        <Contents>false</Contents>
+      </Value>
+      <Value Name="FontName" Type="String">
+        <Contents>Tahoma</Contents>
+      </Value>
+      <Value Name="FontSize" Type="Integer">
+        <Contents>12</Contents>
+      </Value>
+      <Value Name="FontUnderlined" Type="Boolean">
+        <Contents>false</Contents>
+      </Value>
+      <Value Name="Gradient" Type="Boolean">
+        <Contents>true</Contents>
+      </Value>
+      <Value Name="GradientColor2" Type="Integer">
+        <Contents>13861475</Contents>
+      </Value>
+      <Value Name="GradientDown" Type="Boolean">
+        <Contents>true</Contents>
+      </Value>
+      <Value Name="Margin" Type="Integer">
+        <Contents>0</Contents>
+      </Value>
+      <Value Name="Opacity" Type="Integer">
+        <Contents>100</Contents>
+      </Value>
+      <Value Name="Shadow" Type="Boolean">
+        <Contents>true</Contents>
+      </Value>
+      <Value Name="ShadowColor" Type="Integer">
+        <Contents>0</Contents>
+      </Value>
+      <Value Name="ShadowOpacity" Type="Integer">
+        <Contents>20</Contents>
+      </Value>
+      <Value Name="ShadowWidth" Type="Integer">
+        <Contents>3</Contents>
+      </Value>
+      <Value Name="SolidBox" Type="Boolean">
+        <Contents>true</Contents>
+      </Value>
+    </Configuration>
+  </Program>
+</Application>

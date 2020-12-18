@@ -1,0 +1,5 @@
+//the format of the description is the following:
+//"filename" description
+"DefaultControlBar.swf" Metallic control bar
+"DefaultControlBarCoolWhite.swf" Cool White control bar
+"DefaultControlBarMediaPlayer.swf" Media Player control bar

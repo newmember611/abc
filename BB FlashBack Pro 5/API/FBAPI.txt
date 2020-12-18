@@ -1,0 +1,207 @@
+FBAPI Interface v1.0
+===============
+
+FBAPI implemented as COM object DLL - FBAPI.DLL
+This is automatically registered by the BB TestAssistant install process.
+
+
+FBAPI.DLL must be placed in the same directory where FB Recorder is installed.
+FBAPI contains two parts: general interface and error catching.
+
+Interface Methods
+-----------------
+
+
+
+virtual HRESULT STDMETHODCALLTYPE StartRecording(HWND hwnd, CHAR* szFileName);
+----------------------------------------------------------------
+Launches FB Recorder if not already started, and initiates recording.
+Parameters:
+	HWND hwnd - Handle of the window calling this function
+	CHAR* szFileName - file path to record, if NULL create file in default path
+
+Return values:
+	FBAPI_ERROR_SUCCESS (0) - Successful, no error occured.
+	FBAPI_ERROR_IFBAPI_FAILED (-1) - IFBAPI interface was not initialised (may be returned by FBAPI Wrapper only).
+	FBAPI_ERROR_RECORDER_FAILED (1) - FBAPI was unable to locate FB Recorder.
+	FBAPI_ERROR_RECORDER_WRONG_EDITION (2) - FB Recorder is not Test Assistant version.
+	FBAPI_ERROR_SETTING_STATE_ALREADY (3) - FB Recorder is recording already.
+	FBAPI_ERROR_SENDING_REPORT (4) - FB Recorder is sending a report.
+
+
+
+virtual HRESULT STDMETHODCALLTYPE StopRecording(void);
+----------------------------------------------------------------
+Stops recording.
+
+Return values:
+	FBAPI_ERROR_SUCCESS  (0) - Successful, no error occured.
+	FBAPI_ERROR_IFBAPI_FAILED  (-1) - IFBAPI interface was not initialised (may be returned by FBAPI Wrapper only).
+	FBAPI_ERROR_RECORDER_FAILED  (1) - FBAPI was unable to locate FB Recorder.
+	FBAPI_ERROR_RECORDER_WRONG_EDITION  (2) - FB Recorder is not Test Assistant version.
+	FBAPI_ERROR_SETTING_STATE_ALREADY  (3) - FB Recorder is stopped already.
+
+
+
+virtual HRESULT STDMETHODCALLTYPE PauseRecording(void);
+----------------------------------------------------------------
+Pauses recording.
+Return values:
+	FBAPI_ERROR_SUCCESS  (0) - Successful, no error occured.
+	FBAPI_ERROR_IFBAPI_FAILED  (-1) - IFBAPI interface was not initialised (may be returned by FBAPI Wrapper only).
+	FBAPI_ERROR_RECORDER_FAILED  (1) - FBAPI was unable to locate FB Recorder.
+	FBAPI_ERROR_RECORDER_WRONG_EDITION  (2) - FB Recorder is not Test Assistant version.
+	FBAPI_ERROR_SETTING_STATE_ALREADY  (3) - FB Recorder is paused already.
+	FBAPI_ERROR_NOTRECORDING  (5) - FB Recorder is not recording.
+
+
+
+virtual HRESULT STDMETHODCALLTYPE ResumeRecording(void);
+----------------------------------------------------------------
+Resumes recording.
+Return values:
+	FBAPI_ERROR_SUCCESS  (0) - Successful, no error occured.
+	FBAPI_ERROR_IFBAPI_FAILED  (-1) - IFBAPI interface was not initialised (may be returned by FBAPI Wrapper only).
+	FBAPI_ERROR_RECORDER_FAILED  (1) - FBAPI was unable to locate FB Recorder.
+	FBAPI_ERROR_RECORDER_WRONG_EDITION  (2) - FB Recorder is not Test Assistant version.
+	FBAPI_ERROR_SETTING_STATE_ALREADY  (3) - FB Recorder is not paused.
+	FBAPI_ERROR_NOTRECORDING  (5) - FB Recorder is not recording.		
+
+
+
+virtual HRESULT STDMETHODCALLTYPE SendReport(void);
+----------------------------------------------------------------
+Launches FB Recorder if not already started and then starts the Create Report wizard.
+
+Return Values:
+	FBAPI_ERROR_SUCCESS  (0) - Successful, no error occured.
+	FBAPI_ERROR_IFBAPI_FAILED  (-1) - IFBAPI interface was not initialised (may be returned by FBAPI Wrapper only).
+	FBAPI_ERROR_RECORDER_FAILED  (1) - FBAPI was unable to locate FB Recorder.
+	FBAPI_ERROR_RECORDER_WRONG_EDITION  (2) - FB Recorder is not Test Assistant version.
+	FBAPI_ERROR_SETTING_STATE_ALREADY  (3) - Send report wizard is already shown.
+
+
+
+virtual HRESULT STDMETHODCALLTYPE AppStartOK(ULONG ulProcessId);
+----------------------------------------------------------------
+Launch FB Recorder if necessary and then notifies FB Recorder that the process is started and should be watched for unscheduled termination.
+
+Return values:
+	FBAPI_ERROR_SUCCESS  (0) - Successful, no error occured.
+	FBAPI_ERROR_IFBAPI_FAILED  (-1) - IFBAPI interface was not initialised (may be returned by FBAPI Wrapper only).
+	FBAPI_ERROR_RECORDER_FAILED  (1) - FBAPI was unable to locate FB Recorder.
+	FBAPI_ERROR_RECORDER_WRONG_EDITION  (2) - FB Recorder is not Test Assistant version.
+	FBAPI_ERROR_OPEN_PROCESS  (6) - FB Recorder was unable to open handle for ulProcessId process.
+	FBAPI_ERROR_GET_PROCESS_STATUS  (7) - FB Recorder was unable to get process status of ulProcessId process.
+
+Comments:
+BB TestAssistant can watch a given process for unscheduled terminations, due to access violations or other errors. To do this it first needs you to 
+notify it of the application process with AppStartOK(). 
+When the application is due to close you should notify BB TestAssistant via AppEndOK() that it terminated correctly.
+If your application terminates without making a call to AppEndOK, BB TestAssistant assumes that this is due to a crash. It shows a dialog warning 
+of a possible error in the watched application, and asks the user whether they want to create a movie and report via the Create Report wizard.
+
+
+
+virtual HRESULT STDMETHODCALLTYPE AppEndOK(ULONG ulProcessId);
+----------------------------------------------------------------
+Notifies FB Recorder that the process terminated correctly.
+
+Return values:
+	FBAPI_ERROR_SUCCESS  (0) - Successful, no error occured.
+	FBAPI_ERROR_IFBAPI_FAILED  (-1) - IFBAPI interface was not initialised (may be returned by FBAPI Wrapper only).
+	FBAPI_ERROR_RECORDER_FAILED  (1) - FBAPI was unable to locate FB Recorder.
+	FBAPI_ERROR_RECORDER_WRONG_EDITION  (2) - FB Recorder is not Test Assistant version.
+
+
+
+virtual HRESULT STDMETHODCALLTYPE IsRecording(BYTE* pbResult);
+----------------------------------------------------------------
+Examines FB Recorder recording status.
+
+Parameters:
+	pbResult - out value, zero if not recording, not zero otherwise.
+
+Return values:
+	FBAPI_ERROR_SUCCESS  (0) - Successful, no error occured.
+	FBAPI_ERROR_IFBAPI_FAILED  (-1) - IFBAPI interface was not initialised (may be returned by FBAPI Wrapper only).
+	FBAPI_ERROR_RECORDER_FAILED  (1) - FBAPI was unable to locate FB Recorder.
+	FBAPI_ERROR_RECORDER_WRONG_EDITION  (2) - FB Recorder is not Test Assistant version.
+
+
+
+virtual HRESULT STDMETHODCALLTYPE IsPaused(BYTE* pbResult);
+----------------------------------------------------------------
+Examines FB Recorder paused status.
+
+Parameters:
+	pbResult - out value, zero if not paused, not zero otherwise.
+
+Return values:
+	FBAPI_ERROR_SUCCESS  (0) - Successful, no error occured.
+	FBAPI_ERROR_IFBAPI_FAILED  (-1) - IFBAPI interface was not initialised (may be returned by FBAPI Wrapper only).
+	FBAPI_ERROR_RECORDER_FAILED  (1) - FBAPI was unable to locate FB Recorder.
+	FBAPI_ERROR_RECORDER_WRONG_EDITION  (2) - FB Recorder is not Test Assistant version.
+
+
+
+virtual HRESULT STDMETHODCALLTYPE StartErrorCatch(void);
+----------------------------------------------------------------
+Launch BB TestAssistant Recorder if necessary and notifies it to start error catching.
+
+Return values:
+	FBAPI_ERROR_SUCCESS  (0) - Successful, no error occured.
+	FBAPI_ERROR_IFBAPI_FAILED  (-1) - IFBAPI interface was not initialised (may be returned by FBAPI Wrapper only).
+	FBAPI_ERROR_RECORDER_FAILED  (1) - FBAPI was unable to locate FB Recorder.
+	FBAPI_ERROR_RECORDER_WRONG_EDITION  (2) - FB Recorder is not Test Assistant version.
+	FBAPI_ERROR_LOADING_FBAPIDLL  (8) - FB Recorder was unable to load FBAPI.dll.
+	FBAPI_ERROR_FBAPIDLL_INITHOOK  (9) - FB Recorder was unable to InitErrorMsgHook at FBAPI.dll.
+
+Comments: The error catching function in BB TestAssistant is an alternative method of detecting errors to the application watching implemented 
+by the AppStartOK and AppEndOK methods. When error catching is switched on and BB TestAssistant is recording, it watches for any indication 
+of an access violation or unhandled exception by any Windows application. If it detects such an event, it asks the user whether they want to create
+a movie and report.
+
+
+
+virtual HRESULT STDMETHODCALLTYPE StopErrorCatch(void);
+----------------------------------------------------------------
+Notifies BB TestAssistant to stop error catching.
+
+Return values:
+	FBAPI_ERROR_SUCCESS  (0) - Successful, no error occured.
+	FBAPI_ERROR_IFBAPI_FAILED  (-1) - IFBAPI interface was not initialised (may be returned by FBAPI Wrapper only).
+	FBAPI_ERROR_RECORDER_FAILED  (1) - FBAPI was unable to locate FB Recorder.
+	FBAPI_ERROR_LOADING_FBAPIDLL  (8) - FB Recorder was unable to load FBAPI.dll.
+
+
+
+virtual HRESULT STDMETHODCALLTYPE IsErrorCatchingOn(BYTE* pbResult);
+----------------------------------------------------------------
+Examines FB Recorder error catching status.
+
+Parameters:
+	pbResult - out value, zero if error catching off, not zero otherwise.
+
+Return values:
+	FBAPI_ERROR_SUCCESS  (0) - Successful, no error occured.
+	FBAPI_ERROR_IFBAPI_FAILED  (-1) - IFBAPI interface was not initialised (may be returned by FBAPI Wrapper only).
+	FBAPI_ERROR_RECORDER_FAILED  (1) - FBAPI was unable to locate FB Recorder.
+	FBAPI_ERROR_RECORDER_WRONG_EDITION  (2) - FB Recorder is not Test Assistant version.
+
+
+
+
+FBAPI Wrapper
+-------------
+A C++ class: TFBAPI, has been developed for easier access to the FBAPI functions.
+It is described in the FBAPIWrap.h and FBAPIWrap.cpp modules contained in the API/FBAPIWrap folder under the BB TestAssistant install
+folder. It is recommended to use this class to access the FBAPI interface.
+
+
+FBAPI Test Application
+----------------------
+We supply a sample application developed under Borland C++ Builder 6.0  that shows you
+how to use FBAPI method and the TFBAPI wrapper class. The source files are in the API/TestApp folder under BB TestAssistant install folder.
+
+

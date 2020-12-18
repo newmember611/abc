@@ -1,0 +1,15 @@
+﻿<flash_project name="AS3toolbars" version="1">
+    <project_file path="./DefaultControlBar3.fla" filetype="fla" profile="" />
+    <project_file path="./AS3/Element.as" filetype="as" />
+    <project_file path="./AS3/Elements.as" filetype="as" />
+    <project_file path="./AS3/Flashvars.as" filetype="as" />
+    <project_file path="./AS3/Common.as" filetype="as" />
+    <project_file path="./AS3/CommonMultiple.as" filetype="as" />
+    <project_file path="./AS3/ButtonElement.as" filetype="as" />
+    <project_file path="./DefaultControlBarMediaPlayer3.fla" filetype="fla" profile="" />
+    <project_file path="./DefaultControlBarCoolWhite3.fla" filetype="fla" profile="" />
+    <project_file path="./AS3/AutoscrollZoomPanInfo.as" filetype="as" />
+    <project_file path="./AS3/Coords.as" filetype="as" />
+    <project_file path="./AS3/CoordsList.as" filetype="as" />
+    <project_file path="./AS3/PauseElement.as" filetype="as" />
+</flash_project>

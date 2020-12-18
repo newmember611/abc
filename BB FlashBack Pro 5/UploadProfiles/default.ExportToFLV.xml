@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Application Name="File Copy.ExportToFLV">
+  <Program Name="File Copy.ExportToFLV">
+    <Configuration>
+      <Value Name="AddControlBar" Type="Boolean">
+        <Contents>false</Contents>
+      </Value>
+      <Value Name="AutoHide" Type="Boolean">
+        <Contents>false</Contents>
+      </Value>
+      <Value Name="AutoscrollHeight" Type="Integer">
+        <Contents>600</Contents>
+      </Value>
+      <Value Name="AutoscrollMode" Type="Integer">
+        <Contents>0</Contents>
+      </Value>
+      <Value Name="AutoscrollWidth" Type="Integer">
+        <Contents>800</Contents>
+      </Value>
+      <Value Name="ColorBitsCount" Type="Integer">
+        <Contents>32</Contents>
+      </Value>
+      <Value Name="ColorFormat" Type="Integer">
+        <Contents>100</Contents>
+      </Value>
+      <Value Name="ControlBarPositionMode" Type="Integer">
+        <Contents>1</Contents>
+      </Value>
+      <Value Name="ControlBarPositionOver" Type="Boolean">
+        <Contents>false</Contents>
+      </Value>
+      <Value Name="ControlBarType" Type="Integer">
+        <Contents>0</Contents>
+      </Value>
+      <Value Name="DrawWatermark" Type="Boolean">
+        <Contents>false</Contents>
+      </Value>
+      <Value Name="ExportSounds" Type="Boolean">
+        <Contents>true</Contents>
+      </Value>
+      <Value Name="ExternalControlBarFileName" Type="String">
+        <Contents></Contents>
+      </Value>
+      <Value Name="FLVBitrate" Type="Integer">
+        <Contents>500</Contents>
+      </Value>
+      <Value Name="FLVKeyframes" Type="Integer">
+        <Contents>30</Contents>
+      </Value>
+      <Value Name="FLVQuality" Type="Integer">
+        <Contents>8500</Contents>
+      </Value>
+      <Value Name="FLVType" Type="Integer">
+        <Contents>0</Contents>
+      </Value>
+      <Value Name="FlashVersion" Type="Integer">
+        <Contents>6</Contents>
+      </Value>
+      <Value Name="FrameRateMode" Type="Integer">
+        <Contents>0</Contents>
+      </Value>
+      <Value Name="HTMLTemplateFileName" Type="String">
+        <Contents>Default template</Contents>
+      </Value>
+      <Value Name="JPEGQuality" Type="Integer">
+        <Contents>80</Contents>
+      </Value>
+      <Value Name="MXCompression" Type="Boolean">
+        <Contents>true</Contents>
+      </Value>
+      <Value Name="NotScaleInFullScreen" Type="Boolean">
+        <Contents>false</Contents>
+      </Value>
+      <Value Name="OutputSizeHeight" Type="Integer">
+        <Contents>480</Contents>
+      </Value>
+      <Value Name="OutputSizeHeightPercent" Type="Float">
+        <Contents>80</Contents>
+      </Value>
+      <Value Name="OutputSizeKeepAspectRatio" Type="Boolean">
+        <Contents>true</Contents>
+      </Value>
+      <Value Name="OutputSizeWidth" Type="Integer">
+        <Contents>640</Contents>
+      </Value>
+      <Value Name="OutputSizeWidthPercent" Type="Float">
+        <Contents>80</Contents>
+      </Value>
+      <Value Name="PauseByClickingOnMovie" Type="Boolean">
+        <Contents>true</Contents>
+      </Value>
+      <Value Name="PreloadPercent" Type="Integer">
+        <Contents>0</Contents>
+      </Value>
+      <Value Name="PreviewMode" Type="Integer">
+        <Contents>0</Contents>
+      </Value>
+      <Value Name="SFWType" Type="Integer">
+        <Contents>1</Contents>
+      </Value>
+      <Value Name="SWFStopOnLastFrame" Type="Boolean">
+        <Contents>true</Contents>
+      </Value>
+      <Value Name="ScaleToPercents" Type="Boolean">
+        <Contents>false</Contents>
+      </Value>
+      <Value Name="SecureCode" Type="String">
+        <Contents></Contents>
+      </Value>
+      <Value Name="SecureDomainName" Type="String">
+        <Contents></Contents>
+      </Value>
+      <Value Name="ShowAutoHide" Type="Boolean">
+        <Contents>true</Contents>
+      </Value>
+      <Value Name="ShowCursor" Type="Boolean">
+        <Contents>true</Contents>
+      </Value>
+      <Value Name="ShowFBLogo" Type="Boolean">
+        <Contents>true</Contents>
+      </Value>
+      <Value Name="ShowFullScreen" Type="Boolean">
+        <Contents>true</Contents>
+      </Value>
+      <Value Name="ShowNextPrev" Type="Boolean">
+        <Contents>false</Contents>
+      </Value>
+      <Value Name="ShowPausedOverlay" Type="Boolean">
+        <Contents>true</Contents>
+      </Value>
+      <Value Name="ShowSoundBar" Type="Boolean">
+        <Contents>false</Contents>
+      </Value>
+      <Value Name="ShowTimeline" Type="Boolean">
+        <Contents>true</Contents>
+      </Value>
+      <Value Name="ShowTimer" Type="Boolean">
+        <Contents>true</Contents>
+      </Value>
+      <Value Name="SingleSwf" Type="Boolean">
+        <Contents>false</Contents>
+      </Value>
+      <Value Name="SoundCodecId" Type="Integer">
+        <Contents>3</Contents>
+      </Value>
+      <Value Name="SoundCompressFormat" Type="Integer">
+        <Contents>85</Contents>
+      </Value>
+      <Value Name="SoundFormat" Type="Integer">
+        <Contents>0</Contents>
+      </Value>
+      <Value Name="SoundMP3Profile" Type="Integer">
+        <Contents>1</Contents>
+      </Value>
+      <Value Name="StartingPlaybackMode" Type="Integer">
+        <Contents>0</Contents>
+      </Value>
+      <Value Name="UseBestSoundFormat" Type="Boolean">
+        <Contents>false</Contents>
+      </Value>
+      <Value Name="UseSecureCode" Type="Boolean">
+        <Contents>false</Contents>
+      </Value>
+      <Value Name="UseSecureDomain" Type="Boolean">
+        <Contents>false</Contents>
+      </Value>
+      <Value Name="ZlibCompressLevel" Type="Integer">
+        <Contents>9</Contents>
+      </Value>
+    </Configuration>
+  </Program>
+</Application>

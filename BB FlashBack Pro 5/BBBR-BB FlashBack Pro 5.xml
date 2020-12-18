@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BugReportInfo AppName="BB FlashBack Pro 5"> 
+  <ReportURL1>http://logsys.bbconsult.co.uk/LogSysUploadCenter.dll</ReportURL1>
+  <ReportURL>http://logsys.bbconsult.co.uk</ReportURL>
+  <EMailAddress>flashback-support@bbsoftware.co.uk</EMailAddress> 
+  <EMailInvitation>Please send the file below to </EMailInvitation>
+  <RegardsText>Remember - the more information you include in your report, the more we can do to help solve your problem.
+    &lt;br&gt;&lt;br&gt;Best Regards
+    &lt;br&gt;&lt;br&gt;BB Software Support Team
+  </RegardsText>
+  <Subject>BB FlashBack Pro 5 - problem report</Subject> 
+  <Body>Describe the problem you have encountered using BB FlashBack Pro 5. Then send this bug report to the email address as given above.</Body> 
+  <ProblemFormXML>FBFields.xml</ProblemFormXML> 
+  <Files>
+    <File Name="%AppData%\Blueberry\FlashBack5 Player.xml" Destination="Settings"/>
+    <File Name="%AppData%\Blueberry\FlashBack5 Recorder.xml"  Destination="Settings"/>
+    <File Name="%AppData%\Blueberry\FlashBack5 ExportAVI.xml"  Destination="Settings"/>
+    <File Name="%AppData%\Blueberry\FlashBack5 ExportEXE.xml"  Destination="Settings"/>
+    <File Name="%AppData%\Blueberry\FlashBack5 ExportSWF.xml"  Destination="Settings"/>
+    <File Name="%AppData%\Blueberry\FlashBack5 ExportWMV.xml"  Destination="Settings"/>
+    <File Name="%AppData%\Blueberry\FlashBack5 ExportToQuickTime.xml"  Destination="Settings"/>
+    <File Name="%AppData%\Blueberry\FlashBack5 UsageTracking.xml"  Destination="Settings"/>
+    <File Name="%AppData%\Blueberry\FlashBack5 CrashTracking.xml"  Destination="Settings"/>
+    <File Name="%AppData%\LogSys\LogSys Server.xml"  Destination="Settings"/>
+    <File Name="%Common_AppData%\LogSys\LogSys Server.xml"  Destination="SettingsCommon"/>
+    <File Name="%AppData%\LogSys\LogSessions\logsysserver.log"  Destination="Settings"/>
+  </Files> 
+  <LogFiles></LogFiles> 
+  <EventLogs>
+    <EventLog Path="Application" File="ApplicationLog" Query="*[System[Provider[@Name='LogSys.Base' or @Name='LogSys.Client' or @Name='LogSys.Server'] and TimeCreated[timediff(@SystemTime) &lt;= 86400000]]]" />
+  </EventLogs>
+
+</BugReportInfo>

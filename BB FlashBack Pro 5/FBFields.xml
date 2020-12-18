@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLFields>
+
+  <Location Name="panReportTitle"/>
+
+  <Label Caption="Report Title:" Left="13" Top="7" FontBold="Yes"/>
+  <!--Edit Name="ProblemTitle" Value="" Left="13" Top="22" Width="585" Hint="Please enter a one-line summary of the problem"/-->
+  <Edit Name="ProblemTitle" Value="" Left="13" Top="22" Right="13" Hint="Please enter a one-line summary of the problem"/>
+
+  <Location Name="PageControl"/>
+
+  <!--TabPages Left="13" Top="55" Width="570" Align="None"-->
+
+    <Tab Name="Description" ActivePage="Yes" Group="1" ImageIndex="1">
+
+      <RichEdit Name="ProblemDescription" 
+	    ValueRef="ProblemDescription_Data" 
+	    ScrollBars="Vertical" WordWrap="yes"
+	    ToolBar="Permanent"
+	    FontName="MS Sans Serif"
+	    FontSize="7"
+	    Left="2" Top="27" Height="320" Width="555" Right="2"
+	    Hint="Please describe what you did to make the problem happen, and what the problem is"/>
+
+      <!--ProblemDescription_Data>
+	    <![CDATA[The text <b>The Bold one</b>]]>
+      </ProblemDescription_Data-->
+
+    </Tab>
+
+    <Tab Name="Problem Details" ActivePage="No" Group="11" ImageIndex="3">
+
+      <Label Caption="Software Release:" Left="2" Top ="18" FontBold="Yes"/>
+      <Edit Name="SoftwareRelease" Value="" Left="112" Top ="15" Width="140"/>
+
+      <Label Caption="Database Release:" Left="262" Top ="18" FontBold="Yes"/>
+      <Edit Name="DatabaseRelease" Value="" Left="394" Top ="15" Width="140"/>
+
+      <Label Caption="Form ID:" Left="2" Top="45" FontBold="Yes"/>
+      <Edit Name="FormID" Value="" Left="112" Top="42" Width="140"/>
+
+      <Label Caption="Bug/Feature:" Left="2" Top="72" FontBold="Yes"/>
+      <ComboBox Name="BugFeature" Items='"Not determined","Z8 Bug","BB Bug",Feature' Left="112" Top="69" Width="140"/>
+
+      <Label Caption="Priority:" Left="2" Top="99" FontBold="Yes"/>
+      <ComboBox Name="Priority" Items='"Very High",High,Medium,Low' Left="112" Top="96" Width="140"/>
+
+      <Label Caption="Status:" Left="262" Top="126" FontBold="Yes"/>
+      <ComboBox Name="Status" Items='"Waiting Evaluation","More Information Required","Design Work Required","Waiting HML Approval","Waiting Implementation","Waiting Testing","Closed - Fixed","Closed - Duplicate","Closed - Not a bug","Closed - Not Important"' Left="394" Top="123" Width="140"/>
+
+      <Label Caption="Procedure ID:" Left="2" Top ="126" FontBold="Yes"/>
+      <Edit Name="ProcedureID" Value="" Left="112" Top ="123" Width="422"/>
+
+    </Tab>
+
+  <!--/TabPages-->
+
+</XMLFields>

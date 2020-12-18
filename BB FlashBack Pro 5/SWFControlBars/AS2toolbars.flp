@@ -1,0 +1,15 @@
+﻿<flash_project name="AS2toolbars" version="1">
+    <project_file path="./AS2/common.as" filetype="as" />
+    <project_file path="./AS2/commonMultiple.as" filetype="as" />
+    <project_file path="./AS2/commonSingle.as" filetype="as" />
+    <project_file path="./AS2/flashvars.as" filetype="as" />
+    <project_file path="./DefaultControlBar.fla" filetype="fla" profile="" />
+    <project_file path="./DefaultControlBarCoolWhite.fla" filetype="fla" profile="" />
+    <project_file path="./DefaultControlBarCoolWhiteSingle.fla" filetype="fla" profile="" />
+    <project_file path="./DefaultControlBarMediaPlayer.fla" filetype="fla" profile="" />
+    <project_file path="./DefaultControlBarMediaPlayerSingle.fla" filetype="fla" profile="" />
+    <project_file path="./DefaultControlBarSingle.fla" filetype="fla" profile="" />
+    <project_file path="./DefaultControlBarSingleTest.fla" filetype="fla" profile="" />
+    <project_file path="./AS2/password_checking.as" filetype="as" />
+    <project_file path="./AS2/expiring_checking.as" filetype="as" />
+</flash_project>
